@@ -10,28 +10,23 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- TOP NAVBAR-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-expand-lg dark-blue">
       <div class="container-fluid">
-        <a href="#">
-        <img src=".\images\logo_cinema8.png" width="100" alt="Cinema VIII"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <img src=".\images\logo_cinema8.png" width="100" alt="Cinema VIII" />
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sedang Tayang</a>
@@ -50,40 +45,79 @@
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Horor</a></li>
                 <li><a class="dropdown-item" href="#">Komedi</a></li>
+                <li><a class="dropdown-item" href="#">Drama</a></li>
               </ul>
             </li>
-    <!-- LOGIN MODAL -->
-    <li class="nav-item">
-
-    <a class="nav-link active" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Login
-    </a>
-    </li>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div>
-              <label>Username</label><input type="text" placeholder="Username">
-            </div>
-            <div>
-              <label>Password</label><input type="password" placeholder="Password">
-            </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Login</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            <!-- LOGIN MODAL -->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Login
+              </a>
             </li>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Login to Cinema VIII
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div>
+                        <label class="form-label">Username</label>
+                        <input
+                          id="username"
+                          type="text"
+                          placeholder="Username"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label class="form-label">Password</label>
+                        <input
+                          id="password"
+                          type="password"
+                          placeholder="Password"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn dark-blue text-light">
+                      Login
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ul>
           <form class="d-flex" role="search">
             <input
@@ -92,31 +126,33 @@
               placeholder="Cari judul"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">Cari</button>
+            <button class="btn orange" type="submit">Cari</button>
           </form>
         </div>
       </div>
     </nav>
+    <!-- SELAMAT DATANG -->
+    <h1 class="judul">Selamat datang di Cinema VIII</h1>
     <!-- FILM CAROUSELL -->
-    <div id="carouselExample" class="carousel slide"style="width: 70%; left: 14%; margin: 1%">
-      <div class="carousel-inner"  >
+    <div id="carouselExample" class="carousel slide caro position-relative">
+      <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="https://cdn.cgv.id/uploads_v2/marketing/2501/BN202501241040199948.jpg"
+            src="https://live.staticflickr.com/4005/4686746190_31c292dc8c_b.jpg"
             class="d-block w-100"
             alt="movie1"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://cdn.cgv.id/uploads_v2/marketing/2501/BN202501081445406847.jpg"
+            src="https://itsmoreofacomment.com/wp-content/uploads/2021/09/Dune-Movie-Official-Poster-banner-feature.jpg"
             class="d-block w-100"
             alt="movie2"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://media.21cineplex.com/webcontent/gallery/pictures/173687575586132_925x527.jpg"
+            src="https://collider.com/wp-content/uploads/dark-knight-rises-movie-poster-banner-batman.jpg"
             class="d-block w-100"
             alt="movie3"
           />
@@ -125,7 +161,6 @@
       <button
         class="carousel-control-prev"
         type="button"
-        style="background: grey"
         data-bs-target="#carouselExample"
         data-bs-slide="prev"
       >
@@ -135,7 +170,6 @@
       <button
         class="carousel-control-next"
         type="button"
-        style="background: grey"
         data-bs-target="#carouselExample"
         data-bs-slide="next"
       >
@@ -143,9 +177,11 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <!-- FILM CARDS  -->
-    <div class="row row-cols-3 row-cols-md-3 g-4" style="padding: 25px">
-      <div class="col" style="width: 20%; margin: 5px">
+    <h1 class="judul">SEDANG TAYANG</h1>
+    <div class="row row-cols-5 g-3">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://media.21cineplex.com/webcontent/gallery/pictures/173736687992353_290x426.jpg"
@@ -153,15 +189,15 @@
             alt="Dark Nuns"
           />
           <div class="card-body">
-            <h5 class="card-title">Dark Nuns</h5>
+            <a class="card-title" href="#">Dark Nuns</a>
             <p class="card-text">Thriller, Horror</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary"> Beli tiket </small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://media.21cineplex.com/webcontent/gallery/pictures/173737344694264_287x421.jpg"
@@ -172,12 +208,12 @@
             <h5 class="card-title">Nosferatu</h5>
             <p class="card-text">Horror, Mystery</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1"
@@ -188,12 +224,12 @@
             <h5 class="card-title">1 Anak 7 Ponakan</h5>
             <p class="card-text">Drama</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://media.21cineplex.com/webcontent/gallery/pictures/17345962237703_287x421.jpg"
@@ -204,12 +240,12 @@
             <h5 class="card-title">Perayaan Mati Rasa</h5>
             <p class="card-text">Drama, Family</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://media.21cineplex.com/webcontent/gallery/pictures/17345962237703_287x421.jpg"
@@ -220,12 +256,12 @@
             <h5 class="card-title">Perayaan Mati Rasa</h5>
             <p class="card-text">Drama, Family</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://media.21cineplex.com/webcontent/gallery/pictures/17345962237703_287x421.jpg"
@@ -236,12 +272,12 @@
             <h5 class="card-title">Perayaan Mati Rasa</h5>
             <p class="card-text">Drama, Family</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1"
@@ -252,13 +288,12 @@
             <h5 class="card-title">1 Anak 7 Ponakan</h5>
             <p class="card-text">Drama</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
-
-      <div class="col" style="width: 20%; margin: 5px">
+      <div class="col">
         <div class="card h-100">
           <img
             src="https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1"
@@ -269,36 +304,34 @@
             <h5 class="card-title">1 Anak 7 Ponakan</h5>
             <p class="card-text">Drama</p>
           </div>
-          <button class="card-footer" style="border: none">
-            <small class="text-body-secondary">Beli tiket</small>
+          <button class="btn card-footer dark-blue">
+            <span>Beli tiket</span>
           </button>
         </div>
       </div>
     </div>
     <!-- VIEW MORE -->
-     <div class="d-grid gap-2 col-1 mx-auto">
-  <button class="btn btn-primary" type="button">View More</button>
-</div>
-    <!-- BOTTOM -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <span>
-        <a href="/about">About</a> |
-        <a href="/contact">Contact</a> |
+    <div class="col-1 mx-auto m-4">
+      <button class="btn orange" type="button">View More</button>
+    </div>
+    <!-- FOOTER -->
+    <nav class="navbar container-fluid dark-blue footer">
+      <span>
+        <a href="/about">About</a> | <a href="/contact">Contact</a> |
         <a href="/feedback">Feedback</a>
       </span>
-        <span>
-          <img src=".\images\facebook.png" width="20">
-          <img src=".\images\instagram-logo.png" width="20">
-          <img src=".\images\whatsapp.png" width="20">
-          <img src=".\images\youtube.png" width="20">
-        </span>
-      </div>
+      <span>
+        <a href="https://www.facebook.com"
+          ><img src=".\images\facebook.png"
+        /></a>
+        <a href="https://www.instagram.com">
+          <img src=".\images\instagram-logo.png"
+        /></a>
+        <a href="https://www.whatsapp.com"
+          ><img src=".\images\whatsapp.png"
+        /></a>
+        <a href="https://www.youtube.com"><img src=".\images\youtube.png" /></a>
+      </span>
     </nav>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
