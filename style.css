@@ -1,25 +1,135 @@
+/*
+color palette
+#F16634 (orange)
+#1D3D71 (dark blue)
+#3A6CB6 (light blue)
+#383838 (dark grey)
+#F2F6F8 (light grey)
+*/
+
+.dark-blue,
+.dropdown-menu {
+  background-color: #1d3d71;
+  color: #fff;
+}
+
+.orange {
+  background-color: #f16634;
+  color: #fff;
+}
+
+.orange button:hover {
+  background-color: #fff;
+  border: 1px solid #f16634;
+  color: #f16634;
+}
+
+.nav-link {
+  color: #fff;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:active,
+.nav-link:visited {
+  border-bottom: 2px solid #f16634;
+  color: #fff;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background-color: #f16634;
+  color: #fff;
+}
+
+.row {
+  margin: 10px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: #383838;
+}
+
+.caro {
+  width: 50%;
+  height: 280px;
+  margin: 15px auto;
+}
+
+.caro img {
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-title {
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1d3d71;
+}
+
 .sidebar {
-  background-color: grey;
   width: 18%;
   float: left;
   position: fixed;
   height: 100%;
   top: 50px;
   z-index: -1;
-  padding: 10px;
+  padding: 15px;
+  background-color: #f16634;
+  color: #fff;
+}
+
+.sidebar h3 {
+  font-size: 21px;
+  text-align: left;
 }
 
 .sidebar button {
+  display: block;
   border: none;
-  width: 98%;
+  margin: 10px 0px;
+  width: 95%;
   padding: 5px;
-  margin: 2%;
+}
+
+.sidebar button:hover {
+  background-color: #1d3d71;
 }
 
 .details {
-  background-color: grey;
+  padding: 25px;
 }
 
 .details img {
   width: 200px;
+}
+
+.judul {
+  font-size: 32px;
+  text-align: center;
+  margin: 25px;
+}
+
+.fixed {
+  bottom: 0;
+  position: absolute;
+}
+
+.footer {
+  padding: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer img {
+  width: 20px;
 }
