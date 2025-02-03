@@ -71,6 +71,10 @@ color palette
   color: #1d3d71;
 }
 
+.card-footer {
+  color: #fff;
+}
+
 .sidebar {
   width: 18%;
   float: left;
