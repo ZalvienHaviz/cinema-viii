@@ -5,16 +5,6 @@
  */
 
 let movies = [
-    // {
-    //     name: ,
-    //     picURL: ,
-    //     genre: ,
-    //     releaseDate: ,
-    //     endDate: ,
-    //     releaseStatus: , // ended, ongoing, coming soon
-    //     synopsis: ,
-    //     trailerLink: 
-    // },
     {
         name: 'Perayaan Mati Rasa',
         picURL: 'images/perayaan mati rasa.jpg',
