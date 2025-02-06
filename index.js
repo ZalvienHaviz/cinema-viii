@@ -1,11 +1,10 @@
-
 function ShowAllMovieCards() {
-    let movieList = JSON.parse(localStorage.getItem('MovieList'));
-    let cardHolder = document.getElementById('FilmListCardHolder');
-    cardHolder.innerHTML = '';
-    for (let movieIndex in movieList) {
-        movie = movieList[movieIndex];
-        cardHolder.innerHTML += `<div class="col">
+  let movieList = JSON.parse(localStorage.getItem("MovieList"));
+  let cardHolder = document.getElementById("FilmListCardHolder");
+  cardHolder.innerHTML = "";
+  for (let movieIndex in movieList) {
+    movie = movieList[movieIndex];
+    cardHolder.innerHTML += `<div class="col">
         <div class="card h-100">
           <img
             src="${movie.picURL}"
@@ -13,7 +12,9 @@ function ShowAllMovieCards() {
             alt="${movie.name}"
           />
           <div class="card-body">
-            <a class="card-title" href="#">${movie.name}</a>
+            <a class="card-title" href="/movie_details.html#${movieIndex}">${
+      movie.name
+    }</a>
             <p class="card-text">${GenreToString(movie.genre)}</p>
           </div>
           <a href="/movie_details.html#${movieIndex}" style="width: 100%;">
@@ -22,19 +23,19 @@ function ShowAllMovieCards() {
           </button>
           </a>
         </div>
-      </div>`
-    }
+      </div>`;
+  }
 }
 
 function GenreToString(genres) {
-    let string = '';
-    for (let genreIndex in genres) {
-        string += genres[genreIndex];
-        if (genres.length > Number(genreIndex) + 1) {
-            string += ', ';
-        }
+  let string = "";
+  for (let genreIndex in genres) {
+    string += genres[genreIndex];
+    if (genres.length > Number(genreIndex) + 1) {
+      string += ", ";
     }
-    
-    return string;
+  }
+
+  return string;
 }
 ShowAllMovieCards();
