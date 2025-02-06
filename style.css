@@ -23,6 +23,7 @@ body {
 .dark-blue,
 .dropdown-menu {
   background-color: #1d3d71;
+  color: #fff;
 }
 
 .orange {
@@ -115,6 +116,7 @@ body {
   padding: 15px;
   background-color: #f16634;
   color: #fff;
+  overflow: auto;
 }
 
 .sidebar h3 {
