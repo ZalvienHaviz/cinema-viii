@@ -16,6 +16,18 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -48,29 +60,30 @@
                 <li><a class="dropdown-item" href="#">Drama</a></li>
               </ul>
             </li>
-            <!-- LOGIN MODAL -->
+            <!-- MODAL -->
             <li class="nav-item">
               <a
                 class="nav-link"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#loginModal"
               >
                 Login
               </a>
             </li>
+            <!-- START LOGIN MODAL -->
             <div
               class="modal fade"
-              id="exampleModal"
+              id="loginModal"
               tabindex="-1"
-              aria-labelledby="exampleModalLabel"
+              aria-labelledby="loginModalLabel"
               aria-hidden="true"
             >
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                      Login to Cinema VIII
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Login ke Cinema VIII
                     </h5>
                     <button
                       type="button"
@@ -102,6 +115,16 @@
                         />
                       </div>
                     </form>
+                    <p class="regis">
+                      Belum punya akun?
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#regisModal"
+                        data-bs-dismiss="modal"
+                        >Daftar jadi member</a
+                      >.
+                    </p>
                   </div>
                   <div class="modal-footer">
                     <button
@@ -109,7 +132,7 @@
                       class="btn btn-secondary"
                       data-bs-dismiss="modal"
                     >
-                      Close
+                      Tutup
                     </button>
                     <button type="button" class="btn dark-blue text-light">
                       Login
@@ -118,7 +141,89 @@
                 </div>
               </div>
             </div>
+            <!-- END LOGIN MODAL -->
+            <!-- START REGIS MODAL -->
+            <div
+              class="modal fade"
+              id="regisModal"
+              tabindex="-1"
+              aria-labelledby="regisModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="regisModalLabel">
+                      Daftar Member Cinema VIII
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div>
+                        <label class="form-label">Email</label>
+                        <input
+                          id="email"
+                          type="email"
+                          placeholder="Email"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label class="form-label">Username</label>
+                        <input
+                          id="username"
+                          type="text"
+                          placeholder="Username"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label class="form-label">Password</label>
+                        <input
+                          id="password"
+                          type="password"
+                          placeholder="Password"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </form>
+                    <p class="regis">
+                      Sudah punya akun?
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                        data-bs-dismiss="modal"
+                        >Login</a
+                      >.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Tutup
+                    </button>
+                    <button type="button" class="btn dark-blue text-light">
+                      Daftar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ul>
+          <!-- END REGIS MODAL -->
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
@@ -138,23 +243,23 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="https://live.staticflickr.com/4005/4686746190_31c292dc8c_b.jpg"
+            src="https://assetscdn1.paytm.com/images/cinema/Interstellar-7d6259f0-d7fd-11ef-83bf-1dede4761f84.jpeg"
             class="d-block w-100"
             alt="movie1"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://itsmoreofacomment.com/wp-content/uploads/2021/09/Dune-Movie-Official-Poster-banner-feature.jpg"
+            src=".\images\banner_1.png"
             class="d-block w-100"
-            alt="movie2"
+            alt="jadi member"
           />
         </div>
         <div class="carousel-item">
           <img
-            src="https://collider.com/wp-content/uploads/dark-knight-rises-movie-poster-banner-batman.jpg"
+            src=".\images\banner_2.png"
             class="d-block w-100"
-            alt="movie3"
+            alt="promo b1g1"
           />
         </div>
       </div>
@@ -179,7 +284,7 @@
     </div>
 
     <!-- FILM CARDS  -->
-    <h1 class="judul">SEDANG TAYANG</h1>
+    <h1 class="judul">Sedang Tayang</h1>
     <div class="row row-cols-5 g-3">
       <div class="col">
         <div class="card h-100">
@@ -191,118 +296,6 @@
           <div class="card-body">
             <a class="card-title" href="#">Dark Nuns</a>
             <p class="card-text">Thriller, Horror</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://media.21cineplex.com/webcontent/gallery/pictures/173737344694264_287x421.jpg"
-            class="card-img-top"
-            alt="Nosferatu"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Nosferatu</h5>
-            <p class="card-text">Horror, Mystery</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1"
-            class="card-img-top"
-            alt="1 Anak 7 Ponakan"
-          />
-          <div class="card-body">
-            <h5 class="card-title">1 Anak 7 Ponakan</h5>
-            <p class="card-text">Drama</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://media.21cineplex.com/webcontent/gallery/pictures/17345962237703_287x421.jpg"
-            class="card-img-top"
-            alt="Perayaan Mati Rasa"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Perayaan Mati Rasa</h5>
-            <p class="card-text">Drama, Family</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://media.21cineplex.com/webcontent/gallery/pictures/17345962237703_287x421.jpg"
-            class="card-img-top"
-            alt="Perayaan Mati Rasa"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Perayaan Mati Rasa</h5>
-            <p class="card-text">Drama, Family</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://media.21cineplex.com/webcontent/gallery/pictures/17345962237703_287x421.jpg"
-            class="card-img-top"
-            alt="Perayaan Mati Rasa"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Perayaan Mati Rasa</h5>
-            <p class="card-text">Drama, Family</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1"
-            class="card-img-top"
-            alt="1 Anak 7 Ponakan"
-          />
-          <div class="card-body">
-            <h5 class="card-title">1 Anak 7 Ponakan</h5>
-            <p class="card-text">Drama</p>
-          </div>
-          <button class="btn card-footer dark-blue">
-            <span>Beli tiket</span>
-          </button>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img
-            src="https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1"
-            class="card-img-top"
-            alt="1 Anak 7 Ponakan"
-          />
-          <div class="card-body">
-            <h5 class="card-title">1 Anak 7 Ponakan</h5>
-            <p class="card-text">Drama</p>
           </div>
           <button class="btn card-footer dark-blue">
             <span>Beli tiket</span>
