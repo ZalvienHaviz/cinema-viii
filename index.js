@@ -3,7 +3,8 @@ function ShowAllMovieCards() {
     let movieList = JSON.parse(localStorage.getItem('MovieList'));
     let cardHolder = document.getElementById('FilmListCardHolder');
     cardHolder.innerHTML = '';
-    for (let movie of movieList) {
+    for (let movieIndex in movieList) {
+        movie = movieList[movieIndex];
         cardHolder.innerHTML += `<div class="col">
         <div class="card h-100">
           <img
@@ -15,9 +16,11 @@ function ShowAllMovieCards() {
             <a class="card-title" href="#">${movie.name}</a>
             <p class="card-text">${GenreToString(movie.genre)}</p>
           </div>
-          <button class="btn card-footer dark-blue">
+          <a href="/movie_details.html#${movieIndex}" style="width: 100%;">
+          <button class="btn card-footer dark-blue" style="width: 100%;">
             <span>Beli tiket</span>
           </button>
+          </a>
         </div>
       </div>`
     }
