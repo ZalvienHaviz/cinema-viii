@@ -17,15 +17,16 @@
       crossorigin="anonymous"
     ></script>
     <link href="style.css" rel="stylesheet" />
+    
   </head>
-  <body>
+  <body style="display: inline;">
     <!-- TOP NAVBAR -->
     <nav class="navbar navbar-expand-lg dark-blue">
       <div class="container-fluid">
         <img src=".\images\logo_cinema8.png" width="100" alt="Cinema VIII" />
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Logout</a>
@@ -46,49 +47,43 @@
     <table class="table" style="margin-left: 20%; width: 80%">
       <thead>
         <tr>
-          <th scope="col">No.</th>
+          <th scope="col" style="width: 4px;">No.</th>
           <th scope="col">Judul Film</th>
-          <th scope="col">Url Img</th>
-          <th scope="col">Genre</th>
-          <th scope="col">Tanggal Tayang</th>
+          <th scope="col" style="width: 150px; text-align: center;">Url Img</th>
+          <th scope="col" style="text-align: center;">Genre</th>
+          <th scope="col" style="width: 200px; text-align: center;">Tanggal Tayang</th>
+          <th scope="col" style="width: 150px; text-align: center;">Release Status</th>
+          <th scope="col" style="width: 150px; text-align: center;">Synopsis</th>
+          <th scope="col" style="width: 150px; text-align: center;">Trailer Link</th>
+          <th scope="col" style="width: 100px; text-align: center;" class="deleteRow">Delete</th>
+          <th scope="col" style="width: 100px; text-align: center;" class="editRow">Edit</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Nosferatu</td>
-          <td>
-            https://media.21cineplex.com/webcontent/gallery/pictures/173737344694264_287x421.jpg
-          </td>
-          <td>Thriller, Mystery</td>
-          <td>13/01/2025 - 28/02/2025</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>1 Anak 7 Ponakan</td>
-          <td>
-            https://cdn.cgv.id/uploads_v2/movie/compressed/24059700.jpg?version=1
-          </td>
-          <td>Drama, Family</td>
-          <td>13/01/2025 - 15/02/2025</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Nosferatu</td>
-          <td>
-            https://media.21cineplex.com/webcontent/gallery/pictures/173737344694264_287x421.jpg
-          </td>
-          <td>Thriller, Mystery</td>
-          <td>13/01/2025 - 28/02/2025</td>
-        </tr>
+      <tbody id="MoviesTable">
       </tbody>
     </table>
     <!-- SIDEBAR -->
     <div class="sidebar">
       <h3>Cinema VIII Admin</h3>
-      <button>Sedang Tayang</button>
-      <button>Akan Tayang</button>
-      <button>Pengaturan</button>
+      <button type="button" class="btn btn-primary">Create</button>
+      <button type="button" class="btn btn-primary" onclick="ShowHideEditButton()">Show/Hide Edit</button>
+      <button type="button" class="btn btn-primary" onclick="ShowHideDeleteButton()">Show/Hide Delete</button>
+      <button type="button" class="btn btn-primary" onclick="ShowHideSortList()">Sort By</button>
+      <div class="btn-group-vertical" role="group" style="width: 95%;" aria-label="Basic example" id="SortList">
+        <button type="button" style="margin: 0;" class="btn btn-secondary" id="sortByNumberButton" onclick="ChangeColorSortButton('Number')">Nomor</button>
+        <button type="button" style="margin: 0;" class="btn btn-secondary" id="sortByNameButton" onclick="ChangeColorSortButton('Name')">Nama</button>
+        <!-- <button type="button" style="margin: 0;" class="btn btn-secondary" id="SortByDate" onclick="">Tanggal Tayang</button> -->
+      </div>
+      <button type="button" class="btn btn-primary" onclick="ShowHideCategoryList()">Filter : Category</button>
+      <nav style="background-color: white; height: auto; width: 95%;"></nav>
+      <div class="btn-group-vertical" role="group" style="width: 95%;" aria-label="Basic example" id="FilterByCategoryList">
+        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryAllButton" onclick="ChangeColorCategoryButton('All')">All</button>
+        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryHorrorButton" onclick="ChangeColorCategoryButton('Horror')">Horror</button>
+        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryThrillerButton" onclick="ChangeColorCategoryButton('Thriller')">Thriller</button>
+        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryMysteryButton" onclick="ChangeColorCategoryButton('Mystery')">Mystery</button>
+        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryComedyButton" onclick="ChangeColorCategoryButton('Comedy')">Comedy</button>
+      </div>
+      <!-- <button>Pengaturan</button> -->
     </div>
     <!-- FOOTER -->
     <nav class="navbar container-fluid dark-blue footer fixed">
@@ -109,5 +104,8 @@
         <a href="https://www.youtube.com"><img src=".\images\youtube.png" /></a>
       </span>
     </nav>
+    <!-- javascript put here! -->
+     <script src="admin.js"></script>
+     <script src="fileAccess.js"></script>
   </body>
 </html>
