@@ -61,9 +61,172 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <!-- MODAL -->
             </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
+                Login
+              </a>
+            </li>
+            <!-- START LOGIN MODAL -->
+            <div
+              class="modal fade"
+              id="loginModal"
+              tabindex="-1"
+              aria-labelledby="loginModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">
+                      Login ke Cinema VIII
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div>
+                        <label class="form-label">Username</label>
+                        <input
+                          id="username"
+                          type="text"
+                          placeholder="Username"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label class="form-label">Password</label>
+                        <input
+                          id="password"
+                          type="password"
+                          placeholder="Password"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </form>
+                    <p class="regis">
+                      Belum punya akun?
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#regisModal"
+                        data-bs-dismiss="modal"
+                        >Daftar jadi member</a
+                      >.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Tutup
+                    </button>
+                    <button type="button" class="btn dark-blue text-light">
+                      Login
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END LOGIN MODAL -->
+            <!-- START REGIS MODAL -->
+            <div
+              class="modal fade"
+              id="regisModal"
+              tabindex="-1"
+              aria-labelledby="regisModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="regisModalLabel">
+                      Daftar Member Cinema VIII
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div>
+                        <label class="form-label">Email</label>
+                        <input
+                          id="email"
+                          type="email"
+                          placeholder="Email"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label class="form-label">Username</label>
+                        <input
+                          id="username"
+                          type="text"
+                          placeholder="Username"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label class="form-label">Password</label>
+                        <input
+                          id="password"
+                          type="password"
+                          placeholder="Password"
+                          class="form-control"
+                          required
+                        />
+                      </div>
+                    </form>
+                    <p class="regis">
+                      Sudah punya akun?
+                      <a
+                        href="#"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                        data-bs-dismiss="modal"
+                        >Login</a
+                      >.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Tutup
+                    </button>
+                    <button type="button" class="btn dark-blue text-light">
+                      Daftar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ul>
+          <!-- END REGIS MODAL -->
           <form class="d-flex" role="search">
             <input
               class="form-control me-2"
@@ -83,8 +246,7 @@
         <div class="card" style="width: 18rem">
           <img
             src=".\images\about_diki.jpg"
-            class="card-img-top"
-            style="margin-top: 10px"
+            class="card-img-top-abt"
             alt="diki"
           />
           <div class="card-body">
@@ -95,8 +257,7 @@
         <div class="card" style="width: 18rem">
           <img
             src=".\images\about_indra.jpg"
-            class="card-img-top"
-            style="margin-top: 10px"
+            class="card-img-top-abt"
             alt="indra"
           />
           <div class="card-body">
@@ -107,8 +268,7 @@
         <div class="card" style="width: 18rem">
           <img
             src=".\images\about_marha.png"
-            class="card-img-top"
-            style="margin-top: 10px"
+            class="card-img-top-abt"
             alt="marha"
           />
           <div class="card-body">
@@ -119,8 +279,7 @@
         <div class="card" style="width: 18rem">
           <img
             src=".\images\about_zalvin.jpg"
-            class="card-img-top"
-            style="margin-top: 10px"
+            class="card-img-top-abt"
             alt="zalvin"
           />
           <div class="card-body">
@@ -134,7 +293,7 @@
     <nav class="navbar container-fluid dark-blue footer fixed">
       <span>
         <a href="/about.html">About</a> | <a href="/contact">Contact</a> |
-        <a href="/feedback">Feedback</a>
+        <a href="/feedback">Feedback</a> | <a href="/admin.html">Admin Page</a>
       </span>
       <span>
         <a href="https://www.facebook.com"
