@@ -9,6 +9,9 @@ color palette
 
 body {
   font-family: "Montserrat";
+  background-image: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .alfa-slab-one-regular {
@@ -68,6 +71,7 @@ body {
 .carousel-control-next,
 .carousel-control-prev {
   background-color: #818181;
+  opacity: 0;
 }
 
 .caro {
@@ -78,6 +82,12 @@ body {
 
 .caro img {
   height: 280px;
+  object-fit: cover;
+}
+
+.card-img-top {
+  height: 250px;
+  margin-top: 10px;
   object-fit: cover;
 }
 
