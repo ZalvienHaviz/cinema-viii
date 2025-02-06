@@ -77,7 +77,6 @@ function testWriteFile() {
 function HideFunctionButton() {
     // delete button
     let test = sessionStorage.getItem('ShowDeleteButton') === 'false';
-    console.log(test);
     
     if (!sessionStorage.getItem('ShowDeleteButton')) {
         sessionStorage.setItem('ShowDeleteButton', 'false');
