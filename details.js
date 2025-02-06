@@ -1,14 +1,14 @@
-var hash = window.location.hash.slice(1)
+var hash = window.location.hash.slice(1);
 ChangeMovieDetailText(hash);
 
 function ChangeMovieDetailText(hash) {
-    let detail = document.getElementById('DetailStatus');
-    let movieList = JSON.parse(localStorage.getItem('MovieList'));
-    
-    for (let movieIndex in movieList) {
-        if (movieIndex === hash) {
-            let movie = movieList[movieIndex];
-            detail.innerHTML = `<div class="col-3" style="border-right: 1px solid #f16634">
+  let detail = document.getElementById("DetailStatus");
+  let movieList = JSON.parse(localStorage.getItem("MovieList"));
+
+  for (let movieIndex in movieList) {
+    if (movieIndex === hash) {
+      let movie = movieList[movieIndex];
+      detail.innerHTML = `<div class="col-3" style="border-right: 1px solid #f16634">
           <img
             src="${movie.picURL}"
             alt="${movie.name}"
@@ -22,19 +22,19 @@ function ChangeMovieDetailText(hash) {
           </p>
           <p>Tanggal Tayang: ${movie.releaseDate}</p>
           <button class="btn orange">Beli tiket</button>
-        </div>`
-        }
+        </div>`;
     }
+  }
 }
 
 function GenreToString(genres) {
-    let string = '';
-    for (let genreIndex in genres) {
-        string += genres[genreIndex];
-        if (genres.length > Number(genreIndex) + 1) {
-            string += ', ';
-        }
+  let string = "";
+  for (let genreIndex in genres) {
+    string += genres[genreIndex];
+    if (genres.length > Number(genreIndex) + 1) {
+      string += ", ";
     }
-    
-    return string;
+  }
+
+  return string;
 }
