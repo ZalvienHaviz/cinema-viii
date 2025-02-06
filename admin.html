@@ -16,10 +16,21 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="style.css" rel="stylesheet" />
-    
   </head>
-  <body style="display: inline;">
+  <body style="display: inline">
     <!-- TOP NAVBAR -->
     <nav class="navbar navbar-expand-lg dark-blue">
       <div class="container-fluid">
@@ -44,96 +55,253 @@
       </div>
     </nav>
     <!-- TABLE (dont forget to change display on table)-->
-    <table class="table" style="margin-left: 18%; width: 82%;">
+    <table class="table" style="margin-left: 18%; width: 82%">
       <thead>
         <tr>
-          <th scope="col" style="width: 4px;">No.</th>
+          <th scope="col" style="width: 4px">No.</th>
           <th scope="col">Judul Film</th>
-          <th scope="col" style="width: 150px; text-align: center;">Url Img</th>
-          <th scope="col" style="text-align: center;">Genre</th>
-          <th scope="col" style="width: 200px; text-align: center;">Tanggal Tayang</th>
-          <th scope="col" style="width: 180px; text-align: center;">Release Status</th>
-          <th scope="col" style="width: 150px; text-align: center;">Synopsis</th>
-          <th scope="col" style="width: 150px; text-align: center;">Trailer Link</th>
-          <th scope="col" style="width: 100px; text-align: center;" class="deleteRow">Delete</th>
-          <th scope="col" style="width: 100px; text-align: center;" class="editRow">Edit</th>
+          <th scope="col" style="width: 150px; text-align: center">Url Img</th>
+          <th scope="col" style="text-align: center">Genre</th>
+          <th scope="col" style="width: 200px; text-align: center">
+            Tanggal Tayang
+          </th>
+          <th scope="col" style="width: 180px; text-align: center">
+            Release Status
+          </th>
+          <th scope="col" style="width: 150px; text-align: center">Synopsis</th>
+          <th scope="col" style="width: 150px; text-align: center">
+            Trailer Link
+          </th>
+          <th
+            scope="col"
+            style="width: 100px; text-align: center"
+            class="deleteRow"
+          >
+            Delete
+          </th>
+          <th
+            scope="col"
+            style="width: 100px; text-align: center"
+            class="editRow"
+          >
+            Edit
+          </th>
         </tr>
       </thead>
-      <tbody id="MoviesTable">
-      </tbody>
+      <tbody id="MoviesTable"></tbody>
     </table>
     <!-- modal tambahkan data -->
-    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="createModal"
+      tabindex="-1"
+      aria-labelledby="createModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="createModalLabel">Buat Data Baru</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h1 class="modal-title fs-5" id="createModalLabel">
+              Buat Data Baru
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
-            <label for="MovieName">Nama Film : </label> <br>
-            <input type="text" id="MovieName" name="MovieName" style="width: 100%;"><br>
-            <label for="MoviePicURL">Link Gambar Film : </label> <br>
-            <input type="text" id="MoviePicURL" name="MoviePicURL" style="width: 100%;"><br>
-            <label for="MovieGenre">Genre : </label> <br>
-            <input type="text" id="MovieGenre" name="MovieGenre" style="width: 100%;"><br>
-            <label for="MovieReleaseDate">Tanggal Tayang : </label> <br>
-            <input type="date" id="MovieReleaseDate" name="MovieReleaseDate" style="width: 100%;"><br>
-            <label for="MovieReleaseStatus">Rilis Status : </label> <br>
-            <input type="text" id="MovieReleaseStatus" name="MovieReleaseStatus" style="width: 100%;"><br>
-            <label for="MovieSynopsis">Synopsis : </label> <br>
-            <textarea rows="9" cols="60" id="MovieSynopsis" name="MovieSynopsis"></textarea><br>
-            <label for="MovieTrailerLink">Trailer Link : </label> <br>
-            <input type="url" id="MovieTrailerLink" name="MovieTrailerLink" style="width: 100%;"><br>
+            <label for="MovieName">Nama Film : </label> <br />
+            <input
+              type="text"
+              id="MovieName"
+              name="MovieName"
+              style="width: 100%"
+            /><br />
+            <label for="MoviePicURL">Link Gambar Film : </label> <br />
+            <input
+              type="text"
+              id="MoviePicURL"
+              name="MoviePicURL"
+              style="width: 100%"
+            /><br />
+            <label for="MovieGenre">Genre : </label> <br />
+            <input
+              type="text"
+              id="MovieGenre"
+              name="MovieGenre"
+              style="width: 100%"
+            /><br />
+            <label for="MovieReleaseDate">Tanggal Tayang : </label> <br />
+            <input
+              type="date"
+              id="MovieReleaseDate"
+              name="MovieReleaseDate"
+              style="width: 100%"
+            /><br />
+            <label for="MovieReleaseStatus">Rilis Status : </label> <br />
+            <input
+              type="text"
+              id="MovieReleaseStatus"
+              name="MovieReleaseStatus"
+              style="width: 100%"
+            /><br />
+            <label for="MovieSynopsis">Synopsis : </label> <br />
+            <textarea
+              rows="9"
+              cols="50"
+              id="MovieSynopsis"
+              name="MovieSynopsis"
+            ></textarea
+            ><br />
+            <label for="MovieTrailerLink">Trailer Link : </label> <br />
+            <input
+              type="url"
+              id="MovieTrailerLink"
+              name="MovieTrailerLink"
+              style="width: 100%"
+            /><br />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batalkan</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="AddElementToMovieList()" >Tambahkan</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batalkan
+            </button>
+            <button
+              type="button"
+              class="btn dark-blue"
+              data-bs-dismiss="modal"
+              onclick="AddElementToMovieList()"
+            >
+              Tambahkan
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- modal edit data -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="editModalLabel">Edit Data</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
-            <input type="text" id="editMovieID" name="editMovieName" style="display: none;" disabled>
-            <label for="editMovieName">Nama Film : </label> <br>
-            <input type="text" id="editMovieName" name="editMovieName" style="width: 100%;"><br>
-            <label for="editMoviePicURL">Link Gambar Film : </label> <br>
-            <input type="text" id="editMoviePicURL" name="editMoviePicURL" style="width: 100%;"><br>
-            <label for="editMovieGenre">Genre : </label> <br>
-            <input type="text" id="editMovieGenre" name="editMovieGenre" style="width: 100%;"><br>
-            <label for="editMovieReleaseDate">Tanggal Tayang : </label> <br>
-            <input type="text" id="editMovieReleaseDate" name="editMovieReleaseDate" style="width: 100%;"><br>
-            <label for="editMovieReleaseStatus">Rilis Status : </label> <br>
-            <input type="text" id="editMovieReleaseStatus" name="editMovieReleaseStatus" style="width: 100%;"><br>
-            <label for="editMovieSynopsis">Synopsis : </label> <br>
-            <textarea rows="9" cols="60" id="editMovieSynopsis" name="editMovieSynopsis"></textarea><br>
-            <label for="editMovieTrailerLink">Trailer Link : </label> <br>
-            <input type="url" id="editMovieTrailerLink" name="editMovieTrailerLink" style="width: 100%;"><br>
+            <input
+              type="text"
+              id="editMovieID"
+              name="editMovieName"
+              style="display: none"
+              disabled
+            />
+            <label for="editMovieName">Nama Film : </label> <br />
+            <input
+              type="text"
+              id="editMovieName"
+              name="editMovieName"
+              style="width: 100%"
+            /><br />
+            <label for="editMoviePicURL">Link Gambar Film : </label> <br />
+            <input
+              type="text"
+              id="editMoviePicURL"
+              name="editMoviePicURL"
+              style="width: 100%"
+            /><br />
+            <label for="editMovieGenre">Genre : </label> <br />
+            <input
+              type="text"
+              id="editMovieGenre"
+              name="editMovieGenre"
+              style="width: 100%"
+            /><br />
+            <label for="editMovieReleaseDate">Tanggal Tayang : </label> <br />
+            <input
+              type="text"
+              id="editMovieReleaseDate"
+              name="editMovieReleaseDate"
+              style="width: 100%"
+            /><br />
+            <label for="editMovieReleaseStatus">Rilis Status : </label> <br />
+            <input
+              type="text"
+              id="editMovieReleaseStatus"
+              name="editMovieReleaseStatus"
+              style="width: 100%"
+            /><br />
+            <label for="editMovieSynopsis">Synopsis : </label> <br />
+            <textarea
+              rows="9"
+              cols="60"
+              id="editMovieSynopsis"
+              name="editMovieSynopsis"
+            ></textarea
+            ><br />
+            <label for="editMovieTrailerLink">Trailer Link : </label> <br />
+            <input
+              type="url"
+              id="editMovieTrailerLink"
+              name="editMovieTrailerLink"
+              style="width: 100%"
+            /><br />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batalkan</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="EditElementToMovieList()" >Ganti</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batalkan
+            </button>
+            <button
+              type="button"
+              class="btn dark-blue"
+              data-bs-dismiss="modal"
+              onclick="EditElementToMovieList()"
+            >
+              Ganti
+            </button>
           </div>
         </div>
       </div>
     </div>
     <!-- option -->
-    <div class="modal fade" id="showItemModal" tabindex="-1" aria-labelledby="showItemModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="showItemModal"
+      tabindex="-1"
+      aria-labelledby="showItemModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
             <h5 id="itemModalText"></h5>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
           </div>
         </div>
       </div>
@@ -141,26 +309,124 @@
     <!-- SIDEBAR -->
     <div class="sidebar">
       <h3>Cinema VIII Admin</h3>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">Create</button>
-      <button type="button" class="btn btn-primary" onclick="ShowHideEditButton()">Show/Hide Edit</button>
-      <button type="button" class="btn btn-primary" onclick="ShowHideDeleteButton()">Show/Hide Delete</button>
-      <button type="button" class="btn btn-primary" onclick="ShowHideSortList()">Sort By</button>
-      <div class="btn-group-vertical" role="group" style="width: 95%;" aria-label="Basic example" id="SortList">
-        <button type="button" style="margin: 0;" class="btn btn-secondary" id="sortByNumberButton" onclick="ChangeColorSortButton('Number')">Nomor</button>
-        <button type="button" style="margin: 0;" class="btn btn-secondary" id="sortByNameButton" onclick="ChangeColorSortButton('Name')">Nama</button>
+      <button
+        type="button"
+        class="btn dark-blue"
+        data-bs-toggle="modal"
+        data-bs-target="#createModal"
+      >
+        Create
+      </button>
+      <button
+        type="button"
+        class="btn dark-blue"
+        onclick="ShowHideEditButton()"
+      >
+        Show/Hide Edit
+      </button>
+      <button
+        type="button"
+        class="btn dark-blue"
+        onclick="ShowHideDeleteButton()"
+      >
+        Show/Hide Delete
+      </button>
+      <button type="button" class="btn dark-blue" onclick="ShowHideSortList()">
+        Sort By
+      </button>
+      <div
+        class="btn-group-vertical"
+        role="group"
+        style="width: 95%"
+        aria-label="Basic example"
+        id="SortList"
+      >
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary"
+          id="sortByNumberButton"
+          onclick="ChangeColorSortButton('Number')"
+        >
+          Nomor
+        </button>
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary"
+          id="sortByNameButton"
+          onclick="ChangeColorSortButton('Name')"
+        >
+          Nama
+        </button>
       </div>
-      <button type="button" class="btn btn-primary" onclick="ShowHideCategoryList()">Filter : Category</button>
-      <nav style="background-color: white; height: auto; width: 95%;"></nav>
-      <div class="btn-group-vertical" role="group" style="width: 95%;" aria-label="Basic example" id="FilterByCategoryList">
-        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryAllButton" onclick="ChangeColorCategoryButton('All')">All</button>
-        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryHorrorButton" onclick="ChangeColorCategoryButton('Horror')">Horror</button>
-        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryThrillerButton" onclick="ChangeColorCategoryButton('Thriller')">Thriller</button>
-        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryMysteryButton" onclick="ChangeColorCategoryButton('Mystery')">Mystery</button>
-        <button type="button" style="margin: 0;" class="btn btn-secondary category-style" id="CategoryComedyButton" onclick="ChangeColorCategoryButton('Comedy')">Comedy</button>
+      <button
+        type="button"
+        class="btn dark-blue"
+        onclick="ShowHideCategoryList()"
+      >
+        Filter : Category
+      </button>
+      <nav style="background-color: white; height: auto; width: 95%"></nav>
+      <div
+        class="btn-group-vertical"
+        role="group"
+        style="width: 95%"
+        aria-label="Basic example"
+        id="FilterByCategoryList"
+      >
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary category-style"
+          id="CategoryAllButton"
+          onclick="ChangeColorCategoryButton('All')"
+        >
+          All
+        </button>
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary category-style"
+          id="CategoryHorrorButton"
+          onclick="ChangeColorCategoryButton('Horror')"
+        >
+          Horror
+        </button>
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary category-style"
+          id="CategoryThrillerButton"
+          onclick="ChangeColorCategoryButton('Thriller')"
+        >
+          Thriller
+        </button>
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary category-style"
+          id="CategoryMysteryButton"
+          onclick="ChangeColorCategoryButton('Mystery')"
+        >
+          Mystery
+        </button>
+        <button
+          type="button"
+          style="margin: 0"
+          class="btn btn-secondary category-style"
+          id="CategoryComedyButton"
+          onclick="ChangeColorCategoryButton('Comedy')"
+        >
+          Comedy
+        </button>
       </div>
-      <button type="button" class="btn btn-primary" onclick="AddTemplate()">Reset movie to default</button>
-      <button type="button" class="btn btn-primary" onclick="ForceShowTable()">Show Table</button>
-      <!-- <button>Pengaturan</button> -->
+      <button type="button" class="btn dark-blue" onclick="AddTemplate()">
+        Reset movie to default
+      </button>
+      <button type="button" class="btn dark-blue" onclick="ForceShowTable()">
+        Show Table
+      </button>
     </div>
     <!-- FOOTER -->
     <nav class="navbar container-fluid dark-blue footer fixed">
