@@ -52,7 +52,7 @@
           <th scope="col" style="width: 150px; text-align: center;">Url Img</th>
           <th scope="col" style="text-align: center;">Genre</th>
           <th scope="col" style="width: 200px; text-align: center;">Tanggal Tayang</th>
-          <th scope="col" style="width: 150px; text-align: center;">Release Status</th>
+          <th scope="col" style="width: 180px; text-align: center;">Release Status</th>
           <th scope="col" style="width: 150px; text-align: center;">Synopsis</th>
           <th scope="col" style="width: 150px; text-align: center;">Trailer Link</th>
           <th scope="col" style="width: 100px; text-align: center;" class="deleteRow">Delete</th>
@@ -98,7 +98,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="editModalLabel">Edit data</h1>
+            <h1 class="modal-title fs-5" id="editModalLabel">Edit Data</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -121,6 +121,19 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batalkan</button>
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="EditElementToMovieList()" >Ganti</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- option -->
+    <div class="modal fade" id="showItemModal" tabindex="-1" aria-labelledby="showItemModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h5 id="itemModalText"></h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
           </div>
         </div>
       </div>
